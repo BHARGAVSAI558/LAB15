@@ -30,7 +30,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: ./BACKEND/server
-          file: ./BACKEND/server/backend.Dockerfile
+          file: ./BACKEND/server/Backend.Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/ansible-backend:latest
 
@@ -39,6 +39,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: ./FRONTEND/client
-          file: ./FRONTEND/client/frontend.Dockerfile
+          file: ./FRONTEND/client/Frontend.Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/ansible-frontend:latest
